@@ -40,12 +40,21 @@
             <th >buy</th>
         </tr>
         <tr>
+            <td>{{post.Name}}</td>
+            <td>{{post.summary}}</td>
+            <td>{{post.color}}</td>
+            <td>{{post.size}}</td>
+            <td>{{post.price}}</td>
+            <td ><a href="{% url 'min' %}" class="btn btn-primary">Add to cart</a></td>
+        </tr>
+        <tr>
+            {% for post in keyposts %}
             <td>Happy Ninja</td>
             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus quibusdam minima provident dicta tenetur. Porro neque sint hic natus temporibus harum tenetur? Alias officia quia, magnam corporis porro atque?</td>
             <td>Black,blue</td>
             <td>small,large</td>
             <td>€ 18.00</td>
-            <td ><a href="" class="btn btn-primary">Add to cart</a></td>
+            <td ><a href="{% url 'min' %}" class="btn btn-primary">Add to cart</a></td>
         </tr>
         <tr>
             <td>Happy Ninja</td>
@@ -53,7 +62,17 @@
             <td>Black,blue</td>
             <td>small,large</td>
             <td>€ 18.00</td>
-            <td ><button class="bg-primary p-1">Add to cart</button></td>
+            <td ><a href="{% url 'min' %}" class="btn btn-primary">Add to cart</a></td>
+        </tr>
+        <tr>
+            
+            <td>{{post.Name}}</td>
+            <td>{{post.summary}}</td>
+            <td>{{post.color}}</td>
+            <td>{{post.size}}</td>
+            <td>{{post.price}}</td>
+            <td ><a href="{% url 'min' %}" class="btn btn-primary">Add to cart</a></td>
+            
         </tr>
         <tr>
             <td>Happy Ninja</td>
@@ -61,25 +80,11 @@
             <td>Black,blue</td>
             <td>small,large</td>
             <td>€ 18.00</td>
-            <td ><button class="bg-primary p-1">Add to cart</button></td>
-        </tr>
-        <tr>
-            <td>Happy Ninja</td>
-            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus quibusdam minima provident dicta tenetur. Porro neque sint hic natus temporibus harum tenetur? Alias officia quia, magnam corporis porro atque?</td>
-            <td>Black,blue</td>
-            <td>small,large</td>
-            <td>€ 18.00</td>
-            <td ><button class="bg-primary p-1">Add to cart</button></td>
-        </tr>
-        <tr>
-            <td>Happy Ninja</td>
-            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus quibusdam minima provident dicta tenetur. Porro neque sint hic natus temporibus harum tenetur? Alias officia quia, magnam corporis porro atque?</td>
-            <td>Black,blue</td>
-            <td>small,large</td>
-            <td>€ 18.00</td>
-            <td ><button class="bg-primary p-1">Add to cart</button></td>
+            {% endfor %}
+            <td ><a href="{% url 'min' %}" class="btn btn-primary">Add to cart</a></td>
         </tr>
     </table>
+    {{keyposts}}
     
 </body>
 </html>
